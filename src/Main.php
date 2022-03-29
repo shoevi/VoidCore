@@ -32,7 +32,7 @@ use pocketmine\item\Item;
 
 class Main extends PluginBase implements Listener{
     public $PlayerList = [];
- public function select player($player){
+ public function selectPlayer($player){
  	$List = [];
      foreach($this->getServer()->getOnlinePlayers() as $p){
      	$List[] = $p->getName;
