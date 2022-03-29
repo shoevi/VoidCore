@@ -53,7 +53,7 @@ class Main extends PluginBase implements Listener{
  $form->addDropdown("§bPls select all player to invite", $this->PlayerList[$player->getName()] );
  $player->sendForm($form);
  return $form;
-};
+}
 public function duelPlayer($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
