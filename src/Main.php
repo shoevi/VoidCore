@@ -47,7 +47,7 @@ class Main extends PluginBase implements Listener{
       $index = $data[1];
       $PlayerName = $this->PlayerList[$player->getName()] [$index];
       $this->duelPlayer();
- )};
+ });
  $form->setTitle("§3Duels invite");
  $form->setLabel("§3pls select a player to want to duels");
  $form->addDropdown("§bPls select all player to invite", $this->PlayerList[$player->getName()] );
