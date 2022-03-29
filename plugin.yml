@@ -1,0 +1,22 @@
+---
+name: ffamap
+version: 0.0.1
+main: voidpvp\ffamap\Main
+api: 4.0.0
+author: Voidpvp
+src-namespace-prefix: voidpvp\ffamap
+depend:
+ - CustomItem
+commands:
+    ffamap:
+        description: hehe dont come
+        permission: ffamap.ui
+    dmap:
+        description: hehe dont come
+        permission: dmap.ui
+permissions:
+    ffamap.ui:
+        default: true
+    dmap.ui:
+        default: true
+...
