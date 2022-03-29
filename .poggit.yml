@@ -1,0 +1,10 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/reyyan987/VoidCore
+build-by-default: true
+branches:
+- main
+projects:
+  VoidCore:
+    path: ""
+       - src: Vecnavium/FormsUI/libFormsUI
+        version: ^2.0.0
+...
