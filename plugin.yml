@@ -1,12 +1,10 @@
 ---
-name: ffamap
+name: voidpvp
 version: 0.0.1
 main: voidpvp\ffamap\Main
 api: 4.0.0
 author: Voidpvp
 src-namespace-prefix: voidpvp\ffamap
-depend:
- - CustomItem
 commands:
     ffamap:
         description: hehe dont come
