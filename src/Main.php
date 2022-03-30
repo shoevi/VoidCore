@@ -321,35 +321,35 @@ public function kungfu1($player){
 			}
 			switch($data){
 				case 1:
-				$this->getServer()->dispatchCommand("duel queue kung1");
+				$this->getServer()->dispatchCommand($player, "duel queue kung1");
 				break;
                                 
                                 case 2:
-				$this->getServer()->dispatchCommand("duel queue kung2");
+				$this->getServer()->dispatchCommand($player, "duel queue kung2");
 				break;
 
                                 case 3:
-				$this->getServer()->dispatchCommand("duel queue kung3");
+				$this->getServer()->dispatchCommand($player, "duel queue kung3");
 				break;
 
                                 case 4:
-                                $this->getServer()->dispatchCommand("duel queue kung4");
+                                $this->getServer()->dispatchCommand($player, "duel queue kung4");
                                 break;
 
                                 case 5:
-                                $this->getServer()->dispatchCommand("duel queue kung5");
+                                $this->getServer()->dispatchCommand($player, "duel queue kung5");
                                 break;
 
                                 case 6:
-                                $this->getServer()->dispatchCommand("duel queue kung6");
+                                $this->getServer()->dispatchCommand($player, "duel queue kung6");
                                 break;
 
                                 case 7:
-                                $this->getServer()->dispatchCommand("duel queue kung7");
+                                $this->getServer()->dispatchCommand($player, "duel queue kung7");
                                 break;
 
                                 case 8:
-                                $this->getServer()->dispatchCommand("duel queue kung8");
+                                $this->getServer()->dispatchCommand($player, "duel queue kung8");
                                 break;
            }
     });
