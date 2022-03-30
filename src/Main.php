@@ -42,7 +42,7 @@ class Main extends PluginBase implements Listener{
  
       $index = $data[1];
       $PlayerName = $this->PlayerList[$player->getName()] [$index];
-      $this->duelPlayer($player);
+      $this->duel($player);
  });
  $form->setTitle("§3Duels invite");
  $form->addLabel("§3pls select a player to want to duels");
@@ -50,7 +50,32 @@ class Main extends PluginBase implements Listener{
  $player->sendForm($form);
  return $form;
 }
-public function duelPlayer($player){
+public function duel($player){
+	$form = new SimpleForm(function (Player $player, int $data = null) {
+		if($data === null){
+			}
+			switch($data){
+				case 1:
+				$this->gladiator($player);
+				break;
+				
+				case 2:
+				$this->kungfu($player);
+				break;
+				
+				case 3:
+				$this->city($player);
+				break;
+	    }
+    });
+                 $form->setTitle("§bDuels Map selector");
+    $form->setContent("§3Pls select a Duels Map");
+    $form->addButton("§6Gladiators Map",0," textures/ui/addServer");
+$form->addButton("§6Kung Fu Arena Map",0,"textures/ui/bg32");
+$form->addButton("§6Ancient City Map",0,"textures/ui/clock");
+$player->sendForm($form);
+}
+public function gladiator($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
 			}
@@ -73,21 +98,85 @@ public function duelPlayer($player){
 				case 4:
 				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator4');
 				break;
-				
-				case 5:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator5');
-				break;
 	    }
     });
                  $form->setTitle("§bDuels Map selector");
-    $form->setContent("§3Pls select a Duels Map");
+    $form->setContent("§3Pls select an empty map");
     $form->addButton("§6Gladiators 1",0," textures/ui/addServer");
     $form->addButton("§6Gladiators 2",0," textures/ui/addServer");
     $form->addButton("§6Gladiators 3",0," textures/ui/addServer");
     $form->addButton("§6Gladiators 4",0," textures/ui/addServer");
-    $form->addButton("§6Gladiators 5",0," textures/ui/addServer");
-$form->addButton("§6Kung Fu Arena Map",0,"textures/ui/bg32");
-$form->addButton("§6Ancient City Map",0,"textures/ui/clock");
+$player->sendForm($form);
+}
+public function kungfu($player){
+	$form = new SimpleForm(function (Player $player, int $data = null) {
+		if($data === null){
+			}
+			switch($data){
+				case 1:
+				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung1');
+				break;
+                                
+                                case 2:
+				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung2');
+				break;
+
+                                case 3:
+				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung3');
+				break;
+
+                                case 4:
+                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung4');
+                                break;
+
+                                case 5:
+                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung5');
+                                break;
+
+                                case 6:
+                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung6');
+                                break;
+
+                                case 7:
+                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung7');
+                                break;
+
+                                case 8:
+                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung8');
+                                break;
+    });
+                 $form->setTitle("§bPls select a Empty Map");
+$form->addButton("§6Kung Fu 1",0,"textures/ui/bg32");
+$form->addButton("§6Kung Fu 2",0,"textures/ui/bg32");
+$form->addButton("§6Kung Fu 3",0,"textures/ui/bg32");
+$form->addButton("§6Kung Fu 4",0,"textures/ui/bg32");
+$form->addButton("§6Kung Fu 5",0,"textures/ui/bg32");
+$form->addButton("§6Kung Fu 6",0,"textures/ui/bg32");
+$form->addButton("§6Kung Fu 7",0,"textures/ui/bg32");
+$form->addButton("§6Kung Fu 8",0,"textures/ui/bg32");
+$player->sendForm($form);
+}
+public function city($player){
+	$form = new SimpleForm(function (Player $player, int $data = null) {
+		if($data === null){
+			}
+			switch($data){
+				case 1:
+				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'city1');
+				break;
+                                
+                                case 2:
+				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'city2');
+				break;
+
+                                case 3:
+				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'city3');
+				break;
+    });
+                 $form->setTitle("§bPls select a Empty Map");
+$form->addButton("§6City 1",0,"textures/ui/bg32");
+$form->addButton("§6City 2",0,"textures/ui/bg32");
+$form->addButton("§6City 3",0,"textures/ui/bg32");
 $player->sendForm($form);
 }
       
