@@ -70,8 +70,8 @@ public function duel($player){
     });
                  $form->setTitle("§bDuels Map selector");
     $form->setContent("§3Pls select a Duels Map");
-    $form->addButton("§6Gladiators Map",0," textures/ui/addServer");
-$form->addButton("§6Kung Fu Arena Map",0,"textures/ui/bg32");
+    $form->addButton("§6Gladiators Map",0," textures/ui/gladiator");
+$form->addButton("§6Kung Fu Arena Map",0,"textures/ui/city");
 $form->addButton("§6Ancient City Map",0,"textures/ui/clock");
 $player->sendForm($form);
 }
@@ -102,10 +102,10 @@ public function gladiator($player){
     });
                  $form->setTitle("§bDuels Map selector");
     $form->setContent("§3Pls select an empty map");
-    $form->addButton("§6Gladiators 1",0," textures/ui/addServer");
-    $form->addButton("§6Gladiators 2",0," textures/ui/addServer");
-    $form->addButton("§6Gladiators 3",0," textures/ui/addServer");
-    $form->addButton("§6Gladiators 4",0," textures/ui/addServer");
+    $form->addButton("§6Gladiators 1",0," textures/ui/gladiator");
+    $form->addButton("§6Gladiators 2",0," textures/ui/gladiator");
+    $form->addButton("§6Gladiators 3",0," textures/ui/gladiator");
+    $form->addButton("§6Gladiators 4",0," textures/ui/gladiator");
 $player->sendForm($form);
 }
 public function kungfu($player){
@@ -147,14 +147,14 @@ public function kungfu($player){
            }
     });
                  $form->setTitle("§bPls select a Empty Map");
-$form->addButton("§6Kung Fu 1",0,"textures/ui/bg32");
-$form->addButton("§6Kung Fu 2",0,"textures/ui/bg32");
-$form->addButton("§6Kung Fu 3",0,"textures/ui/bg32");
-$form->addButton("§6Kung Fu 4",0,"textures/ui/bg32");
-$form->addButton("§6Kung Fu 5",0,"textures/ui/bg32");
-$form->addButton("§6Kung Fu 6",0,"textures/ui/bg32");
-$form->addButton("§6Kung Fu 7",0,"textures/ui/bg32");
-$form->addButton("§6Kung Fu 8",0,"textures/ui/bg32");
+$form->addButton("§6Kung Fu 1",0,"textures/ui/city");
+$form->addButton("§6Kung Fu 2",0,"textures/ui/city");
+$form->addButton("§6Kung Fu 3",0,"textures/ui/city");
+$form->addButton("§6Kung Fu 4",0,"textures/ui/city");
+$form->addButton("§6Kung Fu 5",0,"textures/ui/city");
+$form->addButton("§6Kung Fu 6",0,"textures/ui/city");
+$form->addButton("§6Kung Fu 7",0,"textures/ui/city");
+$form->addButton("§6Kung Fu 8",0,"textures/ui/kung");
 $player->sendForm($form);
 }
 public function city($player){
@@ -176,9 +176,9 @@ public function city($player){
 }
     });
                  $form->setTitle("§bPls select a Empty Map");
-$form->addButton("§6City 1",0,"textures/ui/bg32");
-$form->addButton("§6City 2",0,"textures/ui/bg32");
-$form->addButton("§6City 3",0,"textures/ui/bg32");
+$form->addButton("§6City 1",0,"textures/ui/city");
+$form->addButton("§6City 2",0,"textures/ui/city");
+$form->addButton("§6City 3",0,"textures/ui/city");
 $player->sendForm($form);
 }
       
@@ -210,6 +210,12 @@ $player->sendForm($form);
             $this->fFa($sender);
         case "dmap":
            $this->duels($sender);
+        case "gladiator":
+           $this->gladiator1($sender);
+        case "kungfu":
+           $this->kungfu1($sender);
+        case "city1":
+           $this->city1($sender);
         }
         return true;
     }
@@ -255,9 +261,6 @@ public function duels($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
 			}
-			$duels1 = $this->getServer()->getWorldManager()->getWorldByName('duels1');
-    $duels2 = $this->getServer()->getWorldManager()->getWorldByName('duels2');
-     $duels3 = $this->getServer()->getWorldManager()->getWorldByName('duels3');
 			switch($data){
 				case 1:
 				$player->teleport($duels1->getSafeSpawn());
@@ -274,9 +277,113 @@ public function duels($player){
     });
                  $form->setTitle("§bDuels Map selector");
     $form->setContent("§3Pls select a Duels Map");
-    $form->addButton("§6Gladiators Map",0," textures/ui/addServer");
-$form->addButton("§6Kung Fu Arena Map",0,"textures/ui/bg32");
-$form->addButton("§6Ancient City Map",0,"textures/ui/clock");
+    $form->addButton("§6Gladiators Map",0," textures/ui/gladiator");
+$form->addButton("§6Kung Fu Arena Map",0,"textures/ui/kung");
+$form->addButton("§6Ancient City Map",0,"textures/ui/city");
+$player->sendForm($form);
+}
+<?php
+public function gladiator1($player){
+	$form = new SimpleForm(function (Player $player, int $data = null) {
+		if($data === null){
+			}
+			switch($data){
+				case 1:
+				$this->getServer()->dispatchCommand($player, "duel queue gladiator1");
+				break;
+				
+				case 2:
+				$this->getServer()->dispatchCommand($player, "duel queue gladiator2");
+				break;
+				
+				case 3:
+				$this->getServer()->dispatchCommand($player, "duel queue gladiator3");
+				break;
+				
+				case 4:
+				$this->getServer()->dispatchCommand($player, "duel queue gladiator4");
+				break;
+	    }
+    });
+                 $form->setTitle("§bDuels Map selector");
+    $form->setContent("§3Pls select an empty map");
+    $form->addButton("§6Gladiators 1",0," textures/ui/one");
+    $form->addButton("§6Gladiators 2",0," textures/ui/two");
+    $form->addButton("§6Gladiators 3",0," textures/ui/three");
+    $form->addButton("§6Gladiators 4",0," textures/ui/four");
+$player->sendForm($form);
+}
+public function kungfu1($player){
+	$form = new SimpleForm(function (Player $player, int $data = null) {
+		if($data === null){
+			}
+			switch($data){
+				case 1:
+				$this->getServer()->dispatchCommand("duel queue kung1");
+				break;
+                                
+                                case 2:
+				$this->getServer()->dispatchCommand("duel queue kung2");
+				break;
+
+                                case 3:
+				$this->getServer()->dispatchCommand("duel queue kung3");
+				break;
+
+                                case 4:
+                                $this->getServer()->dispatchCommand("duel queue kung4");
+                                break;
+
+                                case 5:
+                                $this->getServer()->dispatchCommand("duel queue kung5");
+                                break;
+
+                                case 6:
+                                $this->getServer()->dispatchCommand("duel queue kung6");
+                                break;
+
+                                case 7:
+                                $this->getServer()->dispatchCommand("duel queue kung7");
+                                break;
+
+                                case 8:
+                                $this->getServer()->dispatchCommand("duel queue kung8");
+                                break;
+           }
+    });
+                 $form->setTitle("§bPls select a Empty Map");
+$form->addButton("§6Kung Fu 1",0,"textures/ui/one");
+$form->addButton("§6Kung Fu 2",0,"textures/ui/two");
+$form->addButton("§6Kung Fu 3",0,"textures/ui/three");
+$form->addButton("§6Kung Fu 4",0,"textures/ui/four");
+$form->addButton("§6Kung Fu 5",0,"textures/ui/five");
+$form->addButton("§6Kung Fu 6",0,"textures/ui/six");
+$form->addButton("§6Kung Fu 7",0,"textures/ui/seven");
+$form->addButton("§6Kung Fu 8",0,"textures/ui/eight");
+$player->sendForm($form);
+}
+public function city1($player){
+	$form = new SimpleForm(function (Player $player, int $data = null) {
+		if($data === null){
+			}
+			switch($data){
+				case 1:
+				$this->getServer()->dispatchCommand($player, "duel queue city1");
+				break;
+                                
+                                case 2:
+				$this->getServer()->dispatchCommand($player, "duel queue city2");
+				break;
+
+                                case 3:
+				$this->getServer()->dispatchCommand($player, "duel queue city3");
+				break;
+}
+    });
+                 $form->setTitle("§bPls select a Empty Map");
+$form->addButton("§6City 1",0,"textures/ui/one");
+$form->addButton("§6City 2",0,"textures/ui/two");
+$form->addButton("§6City 3",0,"textures/ui/three");
 $player->sendForm($form);
 }
 }
