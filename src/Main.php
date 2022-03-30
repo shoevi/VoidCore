@@ -282,7 +282,6 @@ $form->addButton("§6Kung Fu Arena Map",0,"textures/ui/kung");
 $form->addButton("§6Ancient City Map",0,"textures/ui/city");
 $player->sendForm($form);
 }
-<?php
 public function gladiator1($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
