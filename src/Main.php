@@ -38,12 +38,8 @@ class Main extends PluginBase implements Listener{
      	$List[] = $p->getName();
      }
      $this->PlayerList[$player->getName()] = $List;
- 	$form = new CustomForm(function (Player $player, array $data = null){
-      if($data = null){
-      	
-      
-      
-      }
+ 	$form = new CustomForm(function (Player $player, array $data){
+ 
       $index = $data[1];
       $PlayerName = $this->PlayerList[$player->getName()] [$index];
       $this->duelPlayer($player);
