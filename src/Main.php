@@ -67,7 +67,7 @@ public function duel($player){
 				$this->city($player);
 				break;
 	    }
-    });
+    )};
                  $form->setTitle("§bDuels Map selector");
     $form->setContent("§3Pls select a Duels Map");
     $form->addButton("§6Gladiators Map",0," textures/ui/addServer");
@@ -144,7 +144,7 @@ public function kungfu($player){
                                 case 8:
                                 $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung8');
                                 break;
-    });
+    )};
                  $form->setTitle("§bPls select a Empty Map");
 $form->addButton("§6Kung Fu 1",0,"textures/ui/bg32");
 $form->addButton("§6Kung Fu 2",0,"textures/ui/bg32");
@@ -172,7 +172,7 @@ public function city($player){
                                 case 3:
 				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'city3');
 				break;
-    });
+    )};
                  $form->setTitle("§bPls select a Empty Map");
 $form->addButton("§6City 1",0,"textures/ui/bg32");
 $form->addButton("§6City 2",0,"textures/ui/bg32");
@@ -237,7 +237,7 @@ $player->sendForm($form);
 				break;
 	        }
 	    
-    });
+    )};
   $mars = count($this->getServer()->getWorldManager()->getWorldByName('newarena')->getPlayers());
        $biomic = count($this->getServer()->getWorldManager()->getWorldByName('ffa')->getPlayers());
              $stadium = count($this->getServer()->getWorldManager()->getWorldByName('collosium')->getPlayers());
@@ -269,7 +269,7 @@ public function duels($player){
 				$player->teleport($duels3->getSafeSpawn());
 				break;
 	    }
-    });
+    )};
                  $form->setTitle("§bDuels Map selector");
     $form->setContent("§3Pls select a Duels Map");
     $form->addButton("§6Gladiators Map",0," textures/ui/addServer");
