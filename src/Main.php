@@ -38,7 +38,7 @@ class Main extends PluginBase implements Listener{
      	$List[] = $p->getName();
      }
      $this->PlayerList[$player->getName()] = $List;
- 	$form = new CustomForm(function (Player $player, array $data){
+ 	$form = new CustomForm(function (Player $player, array $data = null){
       if($data = null){
       	
       
