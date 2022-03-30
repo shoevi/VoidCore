@@ -261,6 +261,9 @@ public function duels($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
 			}
+     $duels1 = $this->getServer()->getWorldManager()->getWorldByName('duels1');
+     $duels2 = $this->getServer()->getWorldManager()->getWorldByName('duels2');
+     $duels3 = $this->getServer()->getWorldManager()->getWorldByName('duels3');
 			switch($data){
 				case 1:
 				$player->teleport($duels1->getSafeSpawn());
