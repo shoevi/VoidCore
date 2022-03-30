@@ -121,11 +121,10 @@ $player->sendForm($form);
         switch($command->getName()){
         case "ffamap":
             $this->fFa($sender);
-        return true;
         case "dmap":
            $this->duels($sender);
-         return true;
         }
+        return true;
     }
       public function fFa($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
@@ -165,7 +164,7 @@ $form->addButton("§6Mars Map \n §bPlayers[{$mars}],0,textures/items/mars");
 $form->addButton("§6boimic Map \n §b[{$biomic}],0,textures/items/biome");$form->addButton("§6Market Map \n §bPlayers[{$Market}],0,textures/items/market");
 $player->sendForm($form);
 }
-public function duel($player){
+public function duels($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
 			}
