@@ -13,7 +13,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\WorldLoadEvent;
 use pocketmine\math\Vector3;
-use JavierLeon9966\ProperDuels;
+use JavierLeon9966\ProperDuels\ProperDuels;
 
 class Main extends PluginBase implements Listener{
     public $PlayerList = [];
