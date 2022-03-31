@@ -386,12 +386,13 @@ $player->sendForm($form);
   $mars = count($this->getServer()->getWorldManager()->getWorldByName('newarena')->getPlayers());
        $biomic = count($this->getServer()->getWorldManager()->getWorldByName('ffa')->getPlayers());
              $stadium = count($this->getServer()->getWorldManager()->getWorldByName('collosium')->getPlayers());
-               $Market = count($this->getServer()->getWorldManager()->getWorldByName('Arenas')->getPlayers());
+               $Market = count($this->getServer()->getWorldManager()->getWorldByName('Arena')->getPlayers());
                  $form->setTitle("§bFFA Map selector");
     $form->setContent("§3Pls select a FFA Map");
     $form->addButton("§6Stadium Map \n §bPlayers[{$stadium}],0,textures/items/stadium");
 $form->addButton("§6Mars Map \n §bPlayers[{$mars}],0,textures/items/mars");
-$form->addButton("§6boimic Map \n §b[{$biomic}],0,textures/items/biome");$form->addButton("§6Market Map \n §bPlayers[{$Market}],0,textures/items/market");
+$form->addButton("§6boimic Map \n §b[{$biomic}],0,textures/items/biome");
+$form->addButton("§6Market Map \n §bPlayers[{$Market}],0,textures/items/market");
 $player->sendForm($form);
 }
 public function duels($player){
