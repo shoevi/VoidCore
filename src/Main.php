@@ -347,12 +347,14 @@ $player->sendForm($form);
             $this->fFa($sender);
         case "dmap":
            $this->duels($sender);
-        case "gladiator":
+        case "gladiator1":
            $this->gladiator1($sender);
-        case "kungfu":
+        case "kungfu1":
            $this->kungfu1($sender);
         case "city1":
            $this->city1($sender);
+        case "dselector":
+           $this->selectPlayer($sender);
         }
         return true;
     }
