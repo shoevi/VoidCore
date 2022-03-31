@@ -5,6 +5,8 @@ main: voidpvp\ffamap\Main
 api: 4.0.0
 author: Voidpvp
 src-namespace-prefix: voidpvp\ffamap
+depend:
+ - ProperDuels
 commands:
     ffamap:
         description: hehe dont come
