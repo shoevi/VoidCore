@@ -14,9 +14,29 @@ commands:
     dmap:
         description: hehe dont come
         permission: dmap.ui
+    gladiator1:
+        description: gladiator only come here
+        permission: g.ui
+    kungfu1:
+        description: kungfu only come here
+        permission: k.ui
+    city1:
+        description: city only come here
+        permission: c.ui
+    dselector:
+        description: dselector only come here
+        permission: d.ui
 permissions:
     ffamap.ui:
         default: true
     dmap.ui:
         default: true
-...
+    k.ui:
+        default: true
+    c.ui:
+        default: true
+    g.ui:
+        default: true
+    d.ui:
+        default: true
+... 
