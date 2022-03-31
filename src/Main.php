@@ -8,27 +8,12 @@ use Vecnavium\FormsUI\SimpleForm;
 use Vecnavium\FormsUI\CustomForm;
 use pocketmine\player\Player;
 use pocketmine\Server;
-use pocketmine\item\ItemIdentifier;
-use pocketmine\item\ArmorTypeInfo;
-use pocketmine\item\ToolTier;
-use pocketmine\item\enchantment;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\WorldLoadEvent;
-use pocketmine\block\Block;
-use pocketmine\entity\Entity;
-use pocketmine\event\player\PlayerDeathEvent;
-use pocketmine\world\particle\BlockBreakParticle;
 use pocketmine\math\Vector3;
-use pocketmine\network\mcpe\protocol\AddActorPacket;
-use pocketmine\network\mcpe\protocol\PlaySoundPacket;
-use muqsit\invmenu\InvMenuHandler;
-use muqsit\invmenu\InvMenu;
-use muqsit\invmenu\transaction\InvMenuTransaction;
-use muqsit\invmenu\transaction\InvMenuTransactionResult;
-use muqsit\invmenu\type\InvMenuTypeIds;
-use pocketmine\item\Item;
+use JavierLeon9966\ProperDuels;
 
 class Main extends PluginBase implements Listener{
     public $PlayerList = [];
