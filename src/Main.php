@@ -56,17 +56,15 @@ public function duel($player){
                  $form->setTitle("§bDuels Map selector");
     $form->setContent("§3Pls select a Duels Map");
     $form->addButton("§6Gladiators Map",0," textures/ui/gladiator");
-$form->addButton("§6Kung Fu Arena Map",0,"textures/ui/city");
-$form->addButton("§6Ancient City Map",0,"textures/ui/clock");
+$form->addButton("§6Kung Fu Arena Map",0,"textures/ui/kung");
+$form->addButton("§6Ancient City Map",0,"textures/ui/city");
 $player->sendForm($form);
 }
 public function gladiator($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
 			}
-			$duels1 = $this->getServer()->getWorldManager()->getWorldByName('duels1');
-    $duels2 = $this->getServer()->getWorldManager()->getWorldByName('duels2');
-     $duels3 = $this->getServer()->getWorldManager()->getWorldByName('duels3');
+			
 			switch($data){
 				case 1:
 				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator1');
@@ -255,13 +253,13 @@ if($arenak8 === null){
     $g4 = "Arena empty";
 }
                  $form->setTitle("§bPls select a Empty Map");
-$form->addButton("§6Kung Fu 1",0,"textures/ui/city");
-$form->addButton("§6Kung Fu 2",0,"textures/ui/city");
-$form->addButton("§6Kung Fu 3",0,"textures/ui/city");
-$form->addButton("§6Kung Fu 4",0,"textures/ui/city");
-$form->addButton("§6Kung Fu 5",0,"textures/ui/city");
-$form->addButton("§6Kung Fu 6",0,"textures/ui/city");
-$form->addButton("§6Kung Fu 7",0,"textures/ui/city");
+$form->addButton("§6Kung Fu 1",0,"textures/ui/kung");
+$form->addButton("§6Kung Fu 2",0,"textures/ui/kung");
+$form->addButton("§6Kung Fu 3",0,"textures/ui/kung");
+$form->addButton("§6Kung Fu 4",0,"textures/ui/kung");
+$form->addButton("§6Kung Fu 5",0,"textures/ui/kung");
+$form->addButton("§6Kung Fu 6",0,"textures/ui/kung");
+$form->addButton("§6Kung Fu 7",0,"textures/ui/kung");
 $form->addButton("§6Kung Fu 8",0,"textures/ui/kung");
 $player->sendForm($form);
 }
@@ -365,7 +363,7 @@ $player->sendForm($form);
 			$mars1 = $this->getServer()->getWorldManager()->getWorldByName('newarena');
     $biomic1 = $this->getServer()->getWorldManager()->getWorldByName('ffa');
      $stadium1 = $this->getServer()->getWorldManager()->getWorldByName('collosium');
-     $market1 = $this->getServer()->getWorldManager()->getWorldByName('Arenas');
+     $market1 = $this->getServer()->getWorldManager()->getWorldByName('Arena');
 			switch($data){
 				case 0:
 				$player->teleport($mars1->getSafeSpawn());
