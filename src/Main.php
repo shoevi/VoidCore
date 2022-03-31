@@ -100,12 +100,53 @@ public function gladiator($player){
 				break;
 	    }
     });
+    $properDuels = ProperDuels::getInstance();
+$arenag1 = $properDuels->getArenaManager()->get('gladiator1'):
+if($arenag1 === null){
+    $g1 = "Arena 'gladiator1' doesn't exists";
+}elseif($properDuels->getGameManager()->has('gladiator1')){
+    $g1 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenag1){
+    $g1 = "1/2 Players. you can join";
+}else{
+    $g1 = "Arena empty";
+}
+$arenag2 = $properDuels->getArenaManager()->get('gladiator2'):
+if($arenag2 === null){
+    $g2 = "Arena 'gladiator2' doesn't exists";
+}elseif($properDuels->getGameManager()->has('gladiator2')){
+    $g2 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenag2){
+    $g2 = "1/2 Players. you can join";
+}else{
+    $g2 = "Arena empty";
+}
+$arenag3 = $properDuels->getArenaManager()->get('gladiator3'):
+if($arenag3 === null){
+    $g3 = "Arena 'gladiator3' doesn't exists";
+}elseif($properDuels->getGameManager()->has('gladiator3')){
+    $g3 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenag3){
+    $g3 = "1/2 Players. you can join";
+}else{
+    $g3 = "Arena empty";
+}
+$arenag4 = $properDuels->getArenaManager()->get('gladiator4'):
+if($arenag4 === null){
+    $g4 = "Arena 'gladiator4' doesn't exists";
+}elseif($properDuels->getGameManager()->has('gladiator4')){
+    $g4 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenag4){
+    $g4 = "1/2 Players. you can join";
+}else{
+    $g4 = "Arena empty";
+}
                  $form->setTitle("§bDuels Map selector");
     $form->setContent("§3Pls select an empty map");
-    $form->addButton("§6Gladiators 1",0," textures/ui/gladiator");
-    $form->addButton("§6Gladiators 2",0," textures/ui/gladiator");
-    $form->addButton("§6Gladiators 3",0," textures/ui/gladiator");
-    $form->addButton("§6Gladiators 4",0," textures/ui/gladiator");
+    $form->addButton("§6Gladiators 1 /n {$g1}",0," textures/ui/gladiator");
+    $form->addButton("§6Gladiators 2 /n {$g2}",0," textures/ui/gladiator");
+    $form->addButton("§6Gladiators 3 /n {$g3}",0," textures/ui/gladiator");
+    $form->addButton("§6Gladiators 4 /n {$g4}",0," textures/ui/gladiator");
 $player->sendForm($form);
 }
 public function kungfu($player){
@@ -146,6 +187,88 @@ public function kungfu($player){
                                 break;
            }
     });
+    $properDuels = ProperDuels::getInstance();
+$arenak1 = $properDuels->getArenaManager()->get('kung1'):
+if($arenak1 === null){
+    $g1 = "Arena 'kung1' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung1')){
+    $g1 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak1){
+    $g1 = "1/2 Players. you can join";
+}else{
+    $g1 = "Arena empty";
+}
+$arenak2 = $properDuels->getArenaManager()->get('kung2'):
+if($arenak2 === null){
+    $g2 = "Arena 'kung2' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung2')){
+    $g2 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak2){
+    $g2 = "1/2 Players. you can join";
+}else{
+    $g2 = "Arena empty";
+}
+$arenak3 = $properDuels->getArenaManager()->get('kung3'):
+if($arenak3 === null){
+    $g3 = "Arena 'kung3' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung3')){
+    $g3 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak3){
+    $g3 = "1/2 Players. you can join";
+}else{
+    $g3 = "Arena empty";
+}
+$arenak4 = $properDuels->getArenaManager()->get('kung4'):
+if($arenak4 === null){
+    $g4 = "Arena 'kung4' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung4')){
+    $g4 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak4){
+    $g4 = "1/2 Players. you can join";
+}else{
+    $g4 = "Arena empty";
+}
+$properDuels = ProperDuels::getInstance();
+$arenak5 = $properDuels->getArenaManager()->get('kung5'):
+if($arenak5 === null){
+    $g5 = "Arena 'kung5' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung5')){
+    $g5 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak5){
+    $g5 = "1/2 Players. you can join";
+}else{
+    $g5 = "Arena empty";
+}
+$arenak6 = $properDuels->getArenaManager()->get('kung6'):
+if($arenak6 === null){
+    $g6 = "Arena 'kung6' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung6')){
+    $g6 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak6){
+    $g6 = "1/2 Players. you can join";
+}else{
+    $g= "Arena empty";
+}
+$arenak7 = $properDuels->getArenaManager()->get('kung7'):
+if($arenak7 === null){
+    $g3 = "Arena 'kung7' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung7')){
+    $g3 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak7){
+    $g3 = "1/2 Players. you can join";
+}else{
+    $g3 = "Arena empty";
+}
+$arenak8 = $properDuels->getArenaManager()->get('kung8'):
+if($arenak8 === null){
+    $g4 = "Arena 'kung8' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung8')){
+    $g4 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak8){
+    $g4 = "1/2 Players. you can join";
+}else{
+    $g4 = "Arena empty";
+}
                  $form->setTitle("§bPls select a Empty Map");
 $form->addButton("§6Kung Fu 1",0,"textures/ui/city");
 $form->addButton("§6Kung Fu 2",0,"textures/ui/city");
@@ -175,6 +298,37 @@ public function city($player){
 				break;
 }
     });
+    $properDuels = ProperDuels::getInstance();
+$arenac1 = $properDuels->getArenaManager()->get('city1'):
+if($arenac1 === null){
+    $g1 = "Arena 'city1' doesn't exists";
+}elseif($properDuels->getGameManager()->has('city1')){
+    $g1 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenac1){
+    $g1 = "1/2 Players. you can join";
+}else{
+    $g1 = "Arena empty";
+}
+$arenac2 = $properDuels->getArenaManager()->get('city2'):
+if($arenac2 === null){
+    $g2 = "Arena 'city2' doesn't exists";
+}elseif($properDuels->getGameManager()->has('city2')){
+    $g2 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenac2){
+    $g2 = "1/2 Players. you can join";
+}else{
+    $g2 = "Arena empty";
+}
+$arenac3 = $properDuels->getArenaManager()->get('city3'):
+if($arenac3 === null){
+    $g3 = "Arena 'city3' doesn't exists";
+}elseif($properDuels->getGameManager()->has('city3')){
+    $g3 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenac3){
+    $g3 = "1/2 Players. you can join";
+}else{
+    $g3 = "Arena empty";
+}
                  $form->setTitle("§bPls select a Empty Map");
 $form->addButton("§6City 1",0,"textures/ui/city");
 $form->addButton("§6City 2",0,"textures/ui/city");
@@ -307,6 +461,47 @@ public function gladiator1($player){
 				break;
 	    }
     });
+    $properDuels = ProperDuels::getInstance();
+$arenag1 = $properDuels->getArenaManager()->get('gladiator1'):
+if($arenag1 === null){
+    $g1 = "Arena 'gladiator1' doesn't exists";
+}elseif($properDuels->getGameManager()->has('gladiator1')){
+    $g1 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenag1){
+    $g1 = "1/2 Players. you can join";
+}else{
+    $g1 = "Arena empty";
+}
+$arenag2 = $properDuels->getArenaManager()->get('gladiator2'):
+if($arenag2 === null){
+    $g2 = "Arena 'gladiator2' doesn't exists";
+}elseif($properDuels->getGameManager()->has('gladiator2')){
+    $g2 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenag2){
+    $g2 = "1/2 Players. you can join";
+}else{
+    $g2 = "Arena empty";
+}
+$arenag3 = $properDuels->getArenaManager()->get('gladiator3'):
+if($arenag3 === null){
+    $g3 = "Arena 'gladiator3' doesn't exists";
+}elseif($properDuels->getGameManager()->has('gladiator3')){
+    $g3 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenag3){
+    $g3 = "1/2 Players. you can join";
+}else{
+    $g3 = "Arena empty";
+}
+$arenag4 = $properDuels->getArenaManager()->get('gladiator4'):
+if($arenag4 === null){
+    $g4 = "Arena 'gladiator4' doesn't exists";
+}elseif($properDuels->getGameManager()->has('gladiator4')){
+    $g4 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenag4){
+    $g4 = "1/2 Players. you can join";
+}else{
+    $g4 = "Arena empty";
+}
                  $form->setTitle("§bDuels Map selector");
     $form->setContent("§3Pls select an empty map");
     $form->addButton("§6Gladiators 1",0," textures/ui/one");
@@ -353,6 +548,88 @@ public function kungfu1($player){
                                 break;
            }
     });
+    $properDuels = ProperDuels::getInstance();
+$arenak1 = $properDuels->getArenaManager()->get('kung1'):
+if($arenak1 === null){
+    $g1 = "Arena 'kung1' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung1')){
+    $g1 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak1){
+    $g1 = "1/2 Players. you can join";
+}else{
+    $g1 = "Arena empty";
+}
+$arenak2 = $properDuels->getArenaManager()->get('kung2'):
+if($arenak2 === null){
+    $g2 = "Arena 'kung2' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung2')){
+    $g2 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak2){
+    $g2 = "1/2 Players. you can join";
+}else{
+    $g2 = "Arena empty";
+}
+$arenak3 = $properDuels->getArenaManager()->get('kung3'):
+if($arenak3 === null){
+    $g3 = "Arena 'kung3' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung3')){
+    $g3 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak3){
+    $g3 = "1/2 Players. you can join";
+}else{
+    $g3 = "Arena empty";
+}
+$arenak4 = $properDuels->getArenaManager()->get('kung4'):
+if($arenak4 === null){
+    $g4 = "Arena 'kung4' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung4')){
+    $g4 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak4){
+    $g4 = "1/2 Players. you can join";
+}else{
+    $g4 = "Arena empty";
+}
+$properDuels = ProperDuels::getInstance();
+$arenak5 = $properDuels->getArenaManager()->get('kung5'):
+if($arenak5 === null){
+    $g1 = "Arena 'kung5' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung5')){
+    $g1 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak5){
+    $g1 = "1/2 Players. you can join";
+}else{
+    $g1 = "Arena empty";
+}
+$arenak6 = $properDuels->getArenaManager()->get('kung6'):
+if($arenak6 === null){
+    $g2 = "Arena 'kung6' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung6')){
+    $g2 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak6){
+    $g2 = "1/2 Players. you can join";
+}else{
+    $g2 = "Arena empty";
+}
+$arenak7 = $properDuels->getArenaManager()->get('kung7'):
+if($arenak7 === null){
+    $g3 = "Arena 'kung7' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung7')){
+    $g3 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak7){
+    $g3 = "1/2 Players. you can join";
+}else{
+    $g3 = "Arena empty";
+}
+$arenak8 = $properDuels->getArenaManager()->get('kung8'):
+if($arenak8 === null){
+    $g4 = "Arena 'kung8' doesn't exists";
+}elseif($properDuels->getGameManager()->has('kung8')){
+    $g4 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak8){
+    $g4 = "1/2 Players. you can join";
+}else{
+    $g4 = "Arena empty";
+}
                  $form->setTitle("§bPls select a Empty Map");
 $form->addButton("§6Kung Fu 1",0,"textures/ui/one");
 $form->addButton("§6Kung Fu 2",0,"textures/ui/two");
@@ -382,6 +659,37 @@ public function city1($player){
 				break;
 }
     });
+    $properDuels = ProperDuels::getInstance();
+$arenac1 = $properDuels->getArenaManager()->get('city1'):
+if($arenac1 === null){
+    $g1 = "Arena 'city1' doesn't exists";
+}elseif($properDuels->getGameManager()->has('city1')){
+    $g1 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenac1){
+    $g1 = "1/2 Players. you can join";
+}else{
+    $g1 = "Arena empty";
+}
+$arenac2 = $properDuels->getArenaManager()->get('city2'):
+if($arenac2 === null){
+    $g2 = "Arena 'city2' doesn't exists";
+}elseif($properDuels->getGameManager()->has('city2')){
+    $g2 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenac2){
+    $g2 = "1/2 Players. you can join";
+}else{
+    $g2 = "Arena empty";
+}
+$arenac3 = $properDuels->getArenaManager()->get('city3'):
+if($arenac3 === null){
+    $g3 = "Arena 'city3' doesn't exists";
+}elseif($properDuels->getGameManager()->has('city3')){
+    $g3 = "Arena Full";
+}elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenac3){
+    $g3 = "1/2 Players. you can join";
+}else{
+    $g3 = "Arena empty";
+}
                  $form->setTitle("§bPls select a Empty Map");
 $form->addButton("§6City 1",0,"textures/ui/one");
 $form->addButton("§6City 2",0,"textures/ui/two");
