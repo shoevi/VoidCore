@@ -29,11 +29,13 @@ class Main extends PluginBase implements Listener{
       $PlayerName = $this->PlayerList[$player->getName()] [$index];
       $this->duel($player);
  });
+ $Name = $PlayerName;
  $form->setTitle("§3Duels invite");
  $form->addLabel("§3pls select a player to want to duels");
  $form->addDropdown("§bPls select all player to invite", $this->PlayerList[$player->getName()] );
  $player->sendForm($form);
  return $form;
+ return $Name;
 }
 public function duel($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
@@ -67,19 +69,19 @@ public function gladiator($player){
 			
 			switch($data){
 				case 1:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator1');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'gladiator1');
 				break;
 				
 				case 2:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator2');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'gladiator2');
 				break;
 				
 				case 3:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator3');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'gladiator3');
 				break;
 				
 				case 4:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator4');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'gladiator4');
 				break;
 	    }
     });
@@ -138,35 +140,35 @@ public function kungfu($player){
 			}
 			switch($data){
 				case 1:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung1');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'kung1');
 				break;
                                 
                                 case 2:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung2');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'kung2');
 				break;
 
                                 case 3:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung3');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'kung3');
 				break;
 
                                 case 4:
-                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung4');
+                                $this->getServer()->dispatchCommand($player, 'duel' .$Name. 'kung4');
                                 break;
 
                                 case 5:
-                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung5');
+                                $this->getServer()->dispatchCommand($player, 'duel' .$Name. 'kung5');
                                 break;
 
                                 case 6:
-                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung6');
+                                $this->getServer()->dispatchCommand($player, 'duel' .$Name. 'kung6');
                                 break;
 
                                 case 7:
-                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung7');
+                                $this->getServer()->dispatchCommand($player, 'duel' .$Name. 'kung7');
                                 break;
 
                                 case 8:
-                                $this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'kung8');
+                                $this->getServer()->dispatchCommand($player, 'duel' .$Name. 'kung8');
                                 break;
            }
     });
@@ -269,15 +271,15 @@ public function city($player){
 			}
 			switch($data){
 				case 1:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'city1');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'city1');
 				break;
                                 
                                 case 2:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'city2');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'city2');
 				break;
 
                                 case 3:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'city3');
+				$this->getServer()->dispatchCommand($player, 'duel' .$Name. 'city3');
 				break;
 }
     });
