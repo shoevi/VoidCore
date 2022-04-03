@@ -8,6 +8,7 @@ use Vecnavium\FormsUI\SimpleForm;
 use Vecnavium\FormsUI\CustomForm;
 use pocketmine\player\Player;
 use pocketmine\Server;
+use JavierLeon9966\ProperDuels\ProperDuels
 use pocketmine\item\ItemIdentifier;
 use pocketmine\item\ArmorTypeInfo;
 use pocketmine\item\ToolTier;
