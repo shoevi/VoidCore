@@ -8,7 +8,7 @@ use Vecnavium\FormsUI\SimpleForm;
 use Vecnavium\FormsUI\CustomForm;
 use pocketmine\player\Player;
 use pocketmine\Server;
-use JavierLeon9966\ProperDuels\ProperDuels
+use JavierLeon9966\ProperDuels\ProperDuels;
 use pocketmine\item\ItemIdentifier;
 use pocketmine\item\ArmorTypeInfo;
 use pocketmine\item\ToolTier;
@@ -32,17 +32,15 @@ use muqsit\invmenu\type\InvMenuTypeIds;
 use pocketmine\item\Item;
 
 class Main extends PluginBase implements Listener{
-    public $PlayerList = [];
+    public $PlayerList;
  public function selectPlayer($player){
  	$List = [];
      foreach($this->getServer()->getOnlinePlayers() as $p){
      	$List[] = $p->getName();
      }
-     $this->PlayerList[$player->getName()] = $List;
- 	$form = new CustomForm(function (Player $player, array $data){
+     $form = new CustomForm(function (Player $player, array $data){
  
       $index = $data[1];
-      $PlayerName = $this->PlayerList[$player->getName()] [$index];
       $this->duel($player);
  });
  $form->setTitle("§3Duels invite");
