@@ -580,33 +580,33 @@ if($arenak4 === null){
 $properDuels = ProperDuels::getInstance();
 $arenak5 = $properDuels->getArenaManager()->get('kung5');
 if($arenak5 === null){
-    $g1 = "Arena 'kung5' doesn't exists";
+    $g5 = "Arena 'kung5' doesn't exists";
 }elseif($properDuels->getGameManager()->has('kung5')){
-    $g1 = "Arena Full";
+    $g5 = "Arena Full";
 }elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak5){
-    $g1 = "1/2 Players. you can join";
+    $g5 = "1/2 Players. you can join";
 }else{
-    $g1 = "Arena empty";
+    $g5 = "Arena empty";
 }
 $arenak6 = $properDuels->getArenaManager()->get('kung6');
 if($arenak6 === null){
-    $g2 = "Arena 'kung6' doesn't exists";
+    $g6 = "Arena 'kung6' doesn't exists";
 }elseif($properDuels->getGameManager()->has('kung6')){
-    $g2 = "Arena Full";
+    $g6 = "Arena Full";
 }elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak6){
-    $g2 = "1/2 Players. you can join";
+    $g6 = "1/2 Players. you can join";
 }else{
-    $g2 = "Arena empty";
+    $g6 = "Arena empty";
 }
 $arenak7 = $properDuels->getArenaManager()->get('kung7');
 if($arenak7 === null){
-    $g3 = "Arena 'kung7' doesn't exists";
+    $g7 = "Arena 'kung7' doesn't exists";
 }elseif($properDuels->getGameManager()->has('kung7')){
-    $g3 = "Arena Full";
+    $g7 = "Arena Full";
 }elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak7){
-    $g3 = "1/2 Players. you can join";
+    $g7 = "1/2 Players. you can join";
 }else{
-    $g3 = "Arena empty";
+    $g7 = "Arena empty";
 }
 $form->setTitle("§bPls select a Empty Map");
 $form->addButton("§6Kung Fu 1 \n {$g1}");
@@ -616,7 +616,7 @@ $form->addButton("§6Kung Fu 4 \n {$g4}");
 $form->addButton("§6Kung Fu 5 \n {$g5}");
 $form->addButton("§6Kung Fu 6 \n {$g6}");
 $form->addButton("§6Kung Fu 7 \n {$g7}");
-$form->sentForm($player);
+$form->sendForm($player);
 }
 public function city1($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
