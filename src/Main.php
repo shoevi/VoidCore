@@ -81,24 +81,34 @@ public function gladiator($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
 			}
-			$duels1 = $this->getServer()->getWorldManager()->getWorldByName('duels1');
-    $duels2 = $this->getServer()->getWorldManager()->getWorldByName('duels2');
-     $duels3 = $this->getServer()->getWorldManager()->getWorldByName('duels3');
+		 $properDuels = ProperDuels::getInstance();
+$sessionManager = $properDuels->getSessionManager();
+$session = $sessionManager->get($PlayerList);
+if($session === null){
+    $sessionManager->add($PlayerList);
+    $session = $sessionManager->get($PlayerList->getUniqueId()->getBytes());
+}
+$otherSession = $sessionManager->get($player->getUniqueId()->getBytes());
+if($otherSession === null){
+    $sessionManager->add($player);
+    $otherSession = $sessionManager->get($player->getUniqueId()->getBytes());
+}
+
 			switch($data){
 				case 1:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator1');
+				 $session->addInvite($otherSession, $properDuels->getArenaManager()->get('gladiator1'));
 				break;
 				
 				case 2:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator2');
+				 $session->addInvite($otherSession, $properDuels->getArenaManager()->get('gladiator2'));
 				break;
 				
 				case 3:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator3');
+				 $session->addInvite($otherSession, $properDuels->getArenaManager()->get('gladiator3'));
 				break;
 				
 				case 4:
-				$this->getServer()->dispatchCommand($player, 'duel' .$this->PlayerList[$player->getName()]. 'gladiator4');
+				 $session->addInvite($otherSession, $properDuels->getArenaManager()->get('gladiator4'));
 				break;
 	    }
     });
@@ -677,3 +687,4 @@ $form->addButton("§6City 3 \n {$g3}");
 $player->sendForm($form);
 }
 }
+
