@@ -48,7 +48,7 @@ class Main extends PluginBase implements Listener{
  });
  $form->setTitle("§3Duels invite");
  $form->addLabel("§3pls select a player to want to duels");
- $form->addDropdown("§bPls select a player to invite", $list);
+ $form->addDropdown("§bPls select a player to invite", $List);
  $player->sendForm($form);
  return $form;
 }
