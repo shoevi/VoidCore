@@ -33,8 +33,11 @@ use pocketmine\item\Item;
 
 class Main extends PluginBase implements Listener{
    public $PlayerList;
-   public $Plist = [];
  public function selectPlayer($player){
+    $List = [];
+     foreach($this->getServer()->getOnlinePlayers() as $p){
+     	$List[] = $p->getName();
+     }
      $form = new CustomForm(function (Player $player, $data){
           if($data === null){
            return true;
@@ -43,10 +46,6 @@ class Main extends PluginBase implements Listener{
       $this->PlayerList = $List[$index];
       $this->duel($player);
  });
-$List = [];
-     foreach($this->getServer()->getOnlinePlayers() as $p){
-     	$List[] = $p->getName();
-     }
  $form->setTitle("§3Duels invite");
  $form->addLabel("§3pls select a player to want to duels");
  $form->addDropdown("§bPls select a player to invite", $list);
