@@ -39,22 +39,24 @@ class Main extends PluginBase implements Listener{
      foreach($this->getServer()->getOnlinePlayers() as $p){
      	$List[] = $p->getName();
      }
-    $this->Plist[$Player->getName()] = $List;
      $form = new CustomForm(function (Player $player, array $data){
- 
+          if($data = null){
+           return true;
+          }
       $index = $data[1];
       $this->PlayerList = $List[$index];
       $this->duel($player);
  });
  $form->setTitle("§3Duels invite");
  $form->addLabel("§3pls select a player to want to duels");
- $form->addDropdown("§bPls select all player to invite", $this->Plist[$Player->getName()]);
+ $form->addDropdown("§bPls select a player to invite", $list);
  $player->sendForm($form);
  return $form;
 }
 public function duel($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
+                     return true;
 			}
 			switch($data){
 				case 1:
