@@ -32,7 +32,7 @@ use muqsit\invmenu\type\InvMenuTypeIds;
 use pocketmine\item\Item;
 
 class Main extends PluginBase implements Listener{
-   Global $PlayerList;
+   Public $PlayerList;
   $Plist = [];
  public function selectPlayer($player){
  	$List = [];
@@ -43,7 +43,7 @@ class Main extends PluginBase implements Listener{
      $form = new CustomForm(function (Player $player, array $data){
  
       $index = $data[1];
-      $PlayerList = $List[$index];
+      $this->PlayerList = $List[$index];
       $this->duel($player);
  });
  $form->setTitle("§3Duels invite");
@@ -80,19 +80,20 @@ $player->sendForm($form);
 public function gladiator($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
 		if($data === null){
-			}
-		 $properDuels = ProperDuels::getInstance();
-$sessionManager = $properDuels->getSessionManager();
-$session = $sessionManager->get($PlayerList);
-if($session === null){
-    $sessionManager->add($PlayerList);
-    $session = $sessionManager->get($PlayerList->getUniqueId()->getBytes());
-}
-$otherSession = $sessionManager->get($player->getUniqueId()->getBytes());
-if($otherSession === null){
-    $sessionManager->add($player);
-    $otherSession = $sessionManager->get($player->getUniqueId()->getBytes());
-}
+                }
+                    $Plyer = $this->Playerlist;
+                    $properDuels = ProperDuels::getInstance();
+                    $sessionManager = $properDuels->getSessionManager();
+                    $session = $sessionManager->get($Plyer);
+                         if($session === null){
+                               $sessionManager->add($Plyer);
+                               $session = $sessionManager->get($Plyer->getUniqueId()->getBytes());
+                           }
+                    $otherSession = $sessionManager->get($player->getUniqueId()->getBytes());
+                          if($otherSession === null){
+                                   $sessionManager->add($player);
+                                   $otherSession = $sessionManager->get($player->getUniqueId()->getBytes());
+                            }
 
 			switch($data){
 				case 1:
