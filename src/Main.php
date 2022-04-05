@@ -32,8 +32,8 @@ use muqsit\invmenu\type\InvMenuTypeIds;
 use pocketmine\item\Item;
 
 class Main extends PluginBase implements Listener{
-   Public $PlayerList;
-  $Plist = [];
+   public $PlayerList;
+   public $Plist = [];
  public function selectPlayer($player){
  	$List = [];
      foreach($this->getServer()->getOnlinePlayers() as $p){
