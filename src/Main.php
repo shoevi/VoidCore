@@ -246,17 +246,17 @@ if($arenak6 === null){
 }elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak6){
     $g6 = "1/2 Players. you can join";
 }else{
-    $g= "Arena empty";
+    $g6 = "Arena empty";
 }
 $arenak7 = $properDuels->getArenaManager()->get('kung7');
 if($arenak7 === null){
-    $g3 = "Arena 'kung7' doesn't exists";
+    $g7 = "Arena 'kung7' doesn't exists";
 }elseif($properDuels->getGameManager()->has('kung7')){
-    $g3 = "Arena Full";
+    $g7 = "Arena Full";
 }elseif($properDuels->getQueueManager()->get($player->getUniqueId()->getBytes()) === $arenak7){
-    $g3 = "1/2 Players. you can join";
+    $g7 = "1/2 Players. you can join";
 }else{
-    $g3 = "Arena empty";
+    $g7 = "Arena empty";
 }
 $form->setTitle("§bPls select a Empty Map");
 $form->addButton("§6Kung Fu 1 \n {$g1}");
