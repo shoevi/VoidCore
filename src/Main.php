@@ -32,15 +32,18 @@ use muqsit\invmenu\type\InvMenuTypeIds;
 use pocketmine\item\Item;
 
 class Main extends PluginBase implements Listener{
-    public $PlayerList;
+   
+
  public function selectPlayer($player){
  	$List = [];
      foreach($this->getServer()->getOnlinePlayers() as $p){
      	$List[] = $p->getName();
      }
+    Global $Name;
      $form = new CustomForm(function (Player $player, array $data){
  
       $index = $data[1];
+      $Name = $List[$index];
       $this->duel($player);
  });
  $form->setTitle("§3Duels invite");
