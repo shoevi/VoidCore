@@ -39,7 +39,7 @@ class Main extends PluginBase implements Listener{
      foreach($this->getServer()->getOnlinePlayers() as $p){
      	$List[] = $p->getName();
      }
-    $this->Plist[$Player->getName()] = $List[];
+    $this->Plist[$Player->getName()] = $List;
      $form = new CustomForm(function (Player $player, array $data){
  
       $index = $data[1];
