@@ -40,7 +40,7 @@ class Main extends PluginBase implements Listener{
      	$List[] = $p->getName();
      }
      $form = new CustomForm(function (Player $player, array $data){
-          if($data = null){
+          if($data === null){
            return true;
           }
       $index = $data[1];
