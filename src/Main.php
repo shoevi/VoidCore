@@ -79,11 +79,8 @@ $form->addButton("§6Ancient City Map");
 $player->sendForm($form);
 }
 public function gladiator($player){
-	$form = new SimpleForm(function (Player $player, int $data = null) {
-		if($data === null){
-                }
-                    $Plyer = $this->Playerlist;
-                    $properDuels = ProperDuels::getInstance();
+ $Plyer = $this->Playerlist;
+ $properDuels = ProperDuels::getInstance();
                     $sessionManager = $properDuels->getSessionManager();
                     $session = $sessionManager->get($Plyer);
                          if($session === null){
@@ -96,6 +93,11 @@ public function gladiator($player){
                                    $otherSession = $sessionManager->get($player->getUniqueId()->getBytes());
                             }
 
+	$form = new SimpleForm(function (Player $player, int $data = null) use ($session, $otherSession, $properDuels) {
+		if($data === null){
+                }
+                    
+                    
 			switch($data){
 				case 1:
 				 $session->addInvite($otherSession, $properDuels->getArenaManager()->get('gladiator1'));
