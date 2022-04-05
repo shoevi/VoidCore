@@ -616,7 +616,7 @@ $form->addButton("§6Kung Fu 4 \n {$g4}");
 $form->addButton("§6Kung Fu 5 \n {$g5}");
 $form->addButton("§6Kung Fu 6 \n {$g6}");
 $form->addButton("§6Kung Fu 7 \n {$g7}");
-$form->sendForm($player);
+$player->sendForm($form);
 }
 public function city1($player){
 	$form = new SimpleForm(function (Player $player, int $data = null) {
