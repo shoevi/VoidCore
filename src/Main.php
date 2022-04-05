@@ -32,14 +32,14 @@ use muqsit\invmenu\type\InvMenuTypeIds;
 use pocketmine\item\Item;
 
 class Main extends PluginBase implements Listener{
-   
-
+   Global $PlayerList;
+  
  public function selectPlayer($player){
  	$List = [];
      foreach($this->getServer()->getOnlinePlayers() as $p){
      	$List[] = $p->getName();
      }
-    Global $PlayerList;
+    $Plist[$p->getName] = $List[];
      $form = new CustomForm(function (Player $player, array $data){
  
       $index = $data[1];
