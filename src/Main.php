@@ -375,6 +375,8 @@ $player->sendForm($form);
            $this->kungfu1($sender);
         case "city1":
            $this->city1($sender);
+        case "dselector":
+           $thix->selectPlayer($sender);
         }
         return true;
     }
