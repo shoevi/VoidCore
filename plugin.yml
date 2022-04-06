@@ -14,13 +14,13 @@ commands:
     dmap:
         description: hehe dont come
         permission: dmap.ui
-    gladiator1:
+    gladiator:
         description: gladiator only come here
         permission: g.ui
-    kungfu1:
+    kungfu:
         description: kungfu only come here
         permission: k.ui
-    city1:
+    city:
         description: city only come here
         permission: c.ui
     dselector:
