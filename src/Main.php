@@ -376,7 +376,7 @@ $player->sendForm($form);
         case "city1":
            $this->city1($sender);
         case "dselector":
-           $thix->selectPlayer($sender);
+           $this->selectPlayer($sender);
         }
         return true;
     }
