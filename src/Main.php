@@ -79,7 +79,8 @@ $form->addButton("§6Ancient City Map");
 $player->sendForm($form);
 }
 public function gladiator($player){
- $Plyer = $this->PlayerList; //selected Player from list 
+ $Plyer = $this->getServer()->getPlayerExact($this->PlayerList);
+//selected Player from list 
  $properDuels = ProperDuels::getInstance();
                     $sessionManager = $properDuels->getSessionManager();
                     $session = $sessionManager->get($Plyer);
